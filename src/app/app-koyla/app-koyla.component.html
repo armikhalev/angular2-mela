@@ -1,21 +1,16 @@
 <div id="koyla_page" class="content koylaPage">
 
-    <input type="submit" value="Change language" id="changeLanguageBtn" class="button">
+    <input type="submit" value="Change language" id="changeLanguageBtn" class="button" (click)="changeLanguage_onClick()">
 
     <form>
-        <header id="languageTranslatedFromHeader" class="formHeader">English</header>
-        <input type="text" id="wordToTranslate"><br>
-
-        <!-- <header class="formHeader">Mela:</header>
-        <input type="text" id="melaWord"><br> -->
+        <header id="languageTranslatedFromHeader" class="formHeader">{{ langTranslateFrom }}</header>
+        <input type="text" id="wordToTranslate" #toTranslate><br>
     </form>
 
-    <input type="submit" value="Submit" id="submitBtn" class="button">
+    <input type="submit" value="Submit" id="submitBtn" class="button" (click)="getWord('english', toTranslate.value)">
 
-    <header id="languageTranslatedToHeader" class="formHeader">Mela</header>
-    <!-- <p>Translate Mela to English</p>
-    <input type="submit" value="Submit" id="melaSubmitBtn"> -->
+    <header id="languageTranslatedToHeader" class="formHeader">{{ langTranslateTo }}</header>
 
-    <div id="translation" class="translationDiv">Translate</div>
+    <div id="translation" class="translationDiv">{{ word }}</div>
 
 </div>
