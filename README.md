@@ -1,27 +1,18 @@
-# NgMela
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
+Creating an app for melasi.pythonanywhere.com using angular2.4 and TypeScript.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The point of this project was to compare the outcome in size and time spent on a project with the following conditions:
 
-## Code scaffolding
+first project is created without use of any framework, only a bit of jQuery to handle Ajax call and DOM manipulation. MVC design pattern was used as the basis. You can look at the repositary with this project at https://github.com/armikhalev/melasi_frontend .
+Second project was utilizing Aurelia framework.
+Third project (this) is using Angular2.4 framework (indicating version bcse it changes rapidly).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+Outcome: 
 
-## Build
+non-frameworky project not minified needed to run the app files are 145.5 kB. Time spent about 20 hours.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Aurelia project not minified needed to run the app files are 1.4 kB. Time spent about 8 hours not including configuration and learning of the basics.
+Notice that Aurelia project is reusing some of the styles and approaches from the non-frameworky project.
 
-## Running unit tests
+Angular project not minified needed to run the app files are 8.2Mb (Should test as minified also, it might be equal to Aurelia). Time spent about 4 hours not including configuration and learning of the basics. Notice that Angular project is reusing some of the styles and approaches from the Aurelia project.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
