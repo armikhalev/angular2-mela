@@ -19,7 +19,7 @@ export class AppKoylaService {
 
   private extractData(res: Response) {
     let body = res.json();
-    return body[0].la || { };
+    return body[0] || { };
   }
 
   private handleError (error: Response | any) {

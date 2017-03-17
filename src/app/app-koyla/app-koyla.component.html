@@ -1,16 +1,18 @@
-<div id="koyla_page" class="content koylaPage">
+<div id="koyla_page" class="row text-center col-xs-offset-4 col-xs-4 ">
 
-    <input type="submit" value="Change language" id="changeLanguageBtn" class="button" (click)="changeLanguage_onClick()">
+    <button (click)="changeLanguage_onClick()" type="submit" id="changeLanguageBtn" class="btn btn-primary">Change language</button>
 
     <form>
-        <header id="languageTranslatedFromHeader" class="formHeader">{{ langTranslateFrom }}</header>
-        <input type="text" id="wordToTranslate" #toTranslate><br>
+        <div class="form-group">
+            <label id="languageTranslatedFromHeader" class="formHeader" for="wordToTranslate">{{ langTranslateFrom }}</label>
+            <input (keyup.enter)="getWord(toTranslate.value)" type="text" placeholder="Type any word to translate" id="wordToTranslate" class="form-control wordToTranslate" #toTranslate><br>
+        </div>
     </form>
 
-    <input type="submit" value="Submit" id="submitBtn" class="button" (click)="getWord('english', toTranslate.value)">
-
-    <header id="languageTranslatedToHeader" class="formHeader">{{ langTranslateTo }}</header>
-
-    <div id="translation" class="translationDiv">{{ word }}</div>
-
+    <button (click)="getWord(toTranslate.value)" type="submit" id="submitBtn" class="btn btn-success">Submit</button>
+    
+    <div class="row">
+        <label id="languageTranslatedToHeader" class="formHeader">{{ langTranslateTo }}</label>
+        <div id="translation" class="translationDiv well well-lg">{{ word }}</div>
+    </div>
 </div>

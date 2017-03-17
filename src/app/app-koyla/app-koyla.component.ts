@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppKoylaService } from '../services/app-koyla.service'
 
 @Component({
-  selector: 'app-app-koyla',
+  selector: 'app-koyla',
   templateUrl: './app-koyla.component.html',
   styleUrls: ['./app-koyla.component.scss']
 })
@@ -26,11 +26,11 @@ export class AppKoylaComponent implements OnInit {
       this.langTranslateFrom = this.langTranslateFrom === "english" ? "mela" : "english";
       this.langTranslateTo = this.langTranslateFrom === "english" ? "mela" : "english";
   }
-  
-  getWord(lang:string, toTranslate:string) {
-    this.koylaService.getWord(lang, toTranslate)
+
+  getWord(toTranslate:string) {
+    this.koylaService.getWord(this.langTranslateFrom, toTranslate)
                      .subscribe(
-                       translation => this.word = translation,
+                       translation => this.word = this.langTranslateFrom === "english" ? translation.la : translation.word,
                        error =>  this.errorMessage = <any>error);
   }
 
