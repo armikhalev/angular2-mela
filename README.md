@@ -11,8 +11,8 @@ Outcome:
 
 non-frameworky project not minified needed to run the app files are 145.5 kB. Time spent about 20 hours.
 
-Aurelia project not minified needed to run the app files are 1.4 kB. Time spent about 8 hours not including configuration and learning of the basics.
+Aurelia project needed to run the app files are 701Kb Minified by the cli in production mode. Time spent about 8 hours not including configuration and learning of the basics.
 Notice that Aurelia project is reusing some of the styles and approaches from the non-frameworky project.
 
-Angular project not minified needed to run the app files are 8.2Mb (Should test as minified also, it might be equal to Aurelia). Time spent about 4 hours not including configuration and learning of the basics. Notice that Angular project is reusing some of the styles and approaches from the Aurelia project.
+Angular project needed to run the app files are 898.6kb Minified by the cli in production mode and aot. Time spent about 4 hours not including configuration and learning of the basics. Notice that Angular project is reusing some of the styles and approaches from the Aurelia project.
 
