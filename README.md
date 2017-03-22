@@ -13,6 +13,7 @@ non-frameworky project not minified needed to run the app files are 145.5 kB. Ti
 
 Aurelia project needed to run the app files are 701Kb Minified by the cli in production mode. Time spent about 8 hours not including configuration and learning of the basics.
 Notice that Aurelia project is reusing some of the styles and approaches from the non-frameworky project.
+All frameworky project use Bootstrap for styling which is 37kB minified.
 
 Angular project needed to run the app files are 898.6kb Minified by the cli in production mode and aot. Time spent about 4 hours not including configuration and learning of the basics. Notice that Angular project is reusing some of the styles and approaches from the Aurelia project.
 
